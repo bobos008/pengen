@@ -106,6 +106,7 @@ def boutique(request):
         ).order_by('-id')[:4]
         data_num = len(data_set.values('id').all())
     except:
+        companyInfo = '' 
         data_sets = ''
         data_num = 0
     data_set1 = select_data(SeasonalFineProducts, choose_kw='more', trip_style=1) 
@@ -134,6 +135,7 @@ def concerning(request):
         aboutus_set = AboutUs.objects.get(pk=1)
     except:
         aboutus_set = ''
+        companyInfo = ''
     datas = {
         'aboutus_set': aboutus_set,
         'companyInfo': companyInfo
@@ -143,9 +145,10 @@ def concerning(request):
 
 def customizedc(request):
     ''' 定制出游 '''
-    companyInfo = CompanyInfo.objects.get(pk='1')
-    if request.method == 'POST':
-        from_location = request.POST.get('from_location', '')
+    try:
+        companyInfo = CompanyInfo.objects.get(pk='1')
+    except:
+        companyInfo = ''
     datas = {
         'companyInfo': companyInfo
     }
@@ -183,19 +186,23 @@ def addcustom(request):
 def detail(request, table_name, new_id):
     ''' 详情页 '''
     data_set = ''
-    if table_name == 'SuperAffordable':
-        if new_id:
-            data_set = SuperAffordable.objects.get(pk=new_id)
-    elif table_name == 'SeasonalFineProducts':
-        if new_id:
-            data_set = SeasonalFineProducts.objects.get(pk=new_id)
-    elif table_name == 'PopularExplosions':
-        if new_id:
-            data_set = PopularExplosions.objects.get(pk=new_id)
-    elif table_name == 'ThemeRoute':
-        if new_id:
-            data_set = ThemeRoute.objects.get(pk=new_id)
-    companyInfo = CompanyInfo.objects.get(pk='1')
+    try:
+        if table_name == 'SuperAffordable':
+            if new_id:
+                data_set = SuperAffordable.objects.get(pk=new_id)
+        elif table_name == 'SeasonalFineProducts':
+            if new_id:
+                data_set = SeasonalFineProducts.objects.get(pk=new_id)
+        elif table_name == 'PopularExplosions':
+            if new_id:
+                data_set = PopularExplosions.objects.get(pk=new_id)
+        elif table_name == 'ThemeRoute':
+            if new_id:
+                data_set = ThemeRoute.objects.get(pk=new_id)
+        companyInfo = CompanyInfo.objects.get(pk='1')
+    except:
+        data_set = ''
+        companyInfo = ''
     datas = {
         'data': data_set,
         'companyInfo': companyInfo
@@ -218,6 +225,7 @@ def indulgence(request):
         ).order_by('-id')[:4]
         data_num = len(data_set.values('id').all())
     except:
+        companyInfo = ''
         data_num = 0
         data_sets = ''
     data_set1 = select_data(SuperAffordable, choose_kw='more', trip_style=1)
@@ -253,6 +261,7 @@ def itinerary(request):
         ).order_by('-id')[:4]
         data_num = len(data_set.values('id').all())
     except:
+        companyInfo = ''
         data_num = 0
         data_sets = ''
     data_set1 = select_data(ThemeRoute, choose_kw='more', trip_style=1)
@@ -277,14 +286,18 @@ def itinerary(request):
 
 def knowledge(request):
     ''' 旅游知识 '''
-    companyInfo = CompanyInfo.objects.get(pk='1')
-    tk_set = TripKnowledge.objects.values(
-        'knowledge_id',
-        'knowledge_title',
-        'knowledge_image',
-        'add_times',
-        'part_content',
-    ).order_by('-knowledge_id')[:3]
+    try:
+        companyInfo = CompanyInfo.objects.get(pk='1')
+        tk_set = TripKnowledge.objects.values(
+            'knowledge_id',
+            'knowledge_title',
+            'knowledge_image',
+            'add_times',
+            'part_content',
+        ).order_by('-knowledge_id')[:3]
+    except:
+        companyInfo = ''
+        tk_set = ''
     datas = {
         'tk_data': tk_set,
         'companyInfo': companyInfo
@@ -306,14 +319,15 @@ def popular(request):
             'goods_image'
         ).order_by('-id')[:4]
         data_num = len(data_set.values('id').all())
-        data_set1 = select_data(PopularExplosions, choose_kw='more', trip_style=1)
-        data_set2 = select_data(PopularExplosions, choose_kw='more', trip_style=2)
-        data_set3 = select_data(PopularExplosions, choose_kw='more', trip_style=3)
-        data_set4 = select_data(PopularExplosions, choose_kw='more', trip_style=4)
-        data_set5 = select_data(PopularExplosions, choose_kw='more', trip_style=5)
     except:
         data_num = 0
         data_sets = ''
+        companyInfo = ''
+    data_set1 = select_data(PopularExplosions, choose_kw='more', trip_style=1)
+    data_set2 = select_data(PopularExplosions, choose_kw='more', trip_style=2)
+    data_set3 = select_data(PopularExplosions, choose_kw='more', trip_style=3)
+    data_set4 = select_data(PopularExplosions, choose_kw='more', trip_style=4)
+    data_set5 = select_data(PopularExplosions, choose_kw='more', trip_style=5)
     datas = {
         'data_num': data_num,
         'data_sets': data_sets,
@@ -342,7 +356,9 @@ def scenic(request):
         data_num = len(data_set)
         data_set = data_set[:4]
     except:
-        pass
+        companyInfo = ''
+        data_num = 0 
+        data_set = ''
 
     datas = {
         'data_num': data_num,
@@ -367,7 +383,9 @@ def strategy(request):
         data_num = len(data_set)
         data_set = data_set[:4]
     except:
-        pass
+        companyInfo = ''
+        data_num = 0 
+        data_set = ''
 
     datas = {
         'data_num': data_num,
