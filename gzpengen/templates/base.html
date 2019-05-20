@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>朋恩旅游 </title>
+    <link rel="stylesheet" href="/static/css/swiper.min.css">
+    <link href="/static/css/style.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="https://rytk20.kuaishang.cn/bs/ks.j?cI=915112&fI=125078" charset="utf-8"></script>
+    <!--[if IE 8]>
+<script type="text/javascript" src="/static/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <!--头部  -->
+    <div class="header">
+        <div class="layout clearfix">
+            {% if companyInfo.logo_img1 %}
+              <h1 class="logo fl">
+                  <img src="/static/Media/{{ companyInfo.logo_img1 }}" alt="">
+              </h1>
+            {% else %}
+              <h1 class="logo fl">
+                  <img src="/static/images/logohead.png" alt="">
+              </h1>
+            {% endif %}
+            <div class="search fl">
+                  <input type="text" placeholder=" 目的地/酒店/景点门票/交通">
+                  <span>
+                      <img src="/static/images/sear.png" alt="">
+                  </span>
+            </div>
+            <div class="wechat fl">
+               <div class="code fl">
+                   <p class="fl">添加微信</p>
+                   {% if companyInfo.qrcode_img1 %}
+                    <img src="/static/Media/{{ companyInfo.qrcode_img1 }}" alt="" >
+                   {% else %}
+                    <img src="/static/images/codehead.png" alt="" >
+                   {% endif %}
+               </div>
+                <div class="hotline fl">
+                    <span>服务热线:</span>
+                    {% if companyInfo.service_hotline %}
+                      <p>{{ companyInfo.service_hotline }}</p>
+                    {% else %}
+                      <p>请添加号码！</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+     <!--导航  -->
+    <div class="nav clearfix">
+      <div class="layout clearfix">
+        <div class="class-list fl">
+          <p class="allList">全部旅游产品</p>
+         <div class="inventory-box clearfix">
+              <!-- <ul class="list-jump  clearfix" style="display: block"> -->
+              <ul class="list-jump  clearfix">
+                  <li class=""> 
+                      <div class="NavContentLeft">
+                        <a href="/indulgence/">超级特惠</a>
+                      </div>
+                      <!-- <div class="personal"  >
+                       <ul class="clearfix">
+                           <li><a href="">三日游1</a></li>
+                           <li><a href="">四日游</a></li>
+                           <li><a href="">五日游</a></li>
+                       </ul>
+                              <ul class="clearfix">
+                           <li><a href="">三日游1</a></li>
+                           <li><a href="">四日游</a></li>
+                           <li><a href="">五日游</a></li>
+                       </ul>
+                      </div> -->
+                  </li>
+                  <li> 
+                    <div class="NavContentLeft">
+                      <a href="/boutique/">当季精品</a>
+                    </div>
+                    <!-- <div class="personal">
+                      <ul class="clearfix">
+                          <li><a href="">三日游2</a></li>
+                          <li><a href="">四日游</a></li>
+                          <li><a href="">五日游</a></li>
+                      </ul>
+                    </div> -->
+                  </li>
+                  <li> 
+                    <div class="NavContentLeft">
+                      <a href="/popular/">人气爆棚</a>
+                    </div>
+                    <!-- <div class="personal">
+                      <ul class="clearfix">
+                        <li><a href="">三日游3</a></li>
+                        <li><a href="">四日游</a></li>
+                        <li><a href="">五日游</a></li>
+                      </ul>
+                    </div> -->
+                  </li>
+                  <li> 
+                    <div class="NavContentLeft">
+                      <a href="/itineray/">主题路线</a>
+                    </div>
+                    <!-- <div class="personal">
+                      <ul class="clearfix">
+                        <li><a href="">三日游4</a></li>
+                        <li><a href="">四日游</a></li>
+                        <li><a href="">五日游</a></li>
+                      </ul>
+                   </div> -->
+                  </li>
+                  <li> 
+                    <div class="NavContentLeft">
+                      <a href="/customizedc/">定制出游</a>
+                    </div>
+                    <!-- <div class="personal">
+                      <ul class="clearfix">
+                          <li><a href="">三日游5</a></li>
+                          <li><a href="">四日游</a></li>
+                          <li><a href="">五日游</a></li>
+                      </ul>
+                   </div> -->
+                  </li>
+                <li class="li2">
+                  <p>旅行定制师 </p>
+                  <span>一对一专业定制</span>
+                  <a href="">立即预定</a>
+               </li>
+          </ul>
+            
+         </div>
+        </div>
+       <ul class="navlist fl">
+         <li ><a href="/" class="active">首页</a></li>
+         <li><a href="/scenic">景点文化</a></li>
+         <li><a href="/strategy">攻略路线</a></li>
+         <li><a href="/knowledge">旅游知识</a></li>
+         <li><a href="/concerning">关于我们</a></li>
+        </ul>
+
+      </div>
+    </div>
+{% block content %}
+{% endblock %}
+
+<!--尾部  -->
+<div class="footer">
+  <div class="layout clearfix">
+    <div class="logo-footer fl">
+      {% if companyInfo.logo_img2 %}
+        <img src="/static/Media/{{ companyInfo.logo_img2 }}" alt="">
+      {% else %}
+        <img src="/static/images/logo-footer.png" alt="">
+      {% endif %}
+    </div>
+    <div class="nav-footer fl">
+      <ul class="jump clearfix">
+        <li><a href="">常见问题</a></li>
+        <li><a href="">旅游合同</a></li>
+        <li><a href="">支付方式</a></li>
+        <li><a href="">服务说明</a></li>
+        <li><a href="">参团说明</a></li>
+      </ul>
+      <ul class="contact clearfix">
+        <li>服务热线: 
+          {% if companyInfo.service_hotline %}
+            <span>{{ companyInfo.service_hotline }}</span>
+          {% else %}
+            <span>请添加！</span>
+          {% endif %}
+        </li>
+        <li>业务QQ: 
+          {% if companyInfo.qq %}
+            <span>companyInfo.qq</span>
+          {% else %}
+            <span>请添加!</span>
+          {% endif %}
+        </li>
+        
+        <li>业务手机: 
+          {% if companyInfo.phone_number %}
+            <span>{{ companyInfo.phone_number }}</span>
+          {% else %}
+            <span>请添加！</span>
+          {% endif %}
+        </li>
+
+        <li>业务微信: 
+          {% if companyInfo.wechat %}
+            <span>{{ companyInfo.wechat }}</span>
+          {% else %}
+            <span>请添加！</span>
+          {% endif %}
+        </li>
+        <li>公司名称: 
+          {% if companyInfo.company_name %}
+            <span>{{ companyInfo.company_name }}</span>
+          {% else %}
+            <span>请添加！</span>
+          {% endif %}
+        </li>
+
+        <li>公司网址: 
+          {% if companyInfo.website %}
+            <span>{{ companyInfo.website }}</span>
+          {% else %}
+            <span>请添加！</span>
+          {% endif %}
+        </li>
+        <li>开户名: 
+          {% if companyInfo.account_name %}
+            <span>{{ companyInfo.account_name }}</span>
+          {% else %}
+            <span>请添加！</span>
+          {% endif %}
+        </li>
+        <li>汇款名称: 
+          {% if companyInfo.Remittances_name %}
+            <span>{{ companyInfo.Remittances_name }}</span>
+          {% else %}
+            <span>请添加！</span>
+          {% endif %}
+        </li>
+        <li>账号: 
+          {% if companyInfo.account_number %}
+            <span>{{ companyInfo.account_number }}</span>
+          {% else %}
+            <span>请添加！</span>
+          {% endif %}
+        </li>
+      </ul>
+      <ul class="permit">
+        <li>许可证号: 
+          {% if companyInfo.license_num %}
+            <span>{{ companyInfo.license_num }}</span>
+          {% else %}
+            <span>请添加！</span>
+          {% endif %}
+        </li>
+        <li>安全联盟</li>
+        <li>营业执照号 
+          {% if companyInfo.business_license %}
+            <span>{{ companyInfo.business_license }}</span>
+          {% else %}
+            <span>请添加!</span>
+          {% endif %}
+        </li>
+      </ul>
+    </div>
+    <div class="code-footer fl">
+      <p>微信二维码</p>
+      {% if companyInfo.qrcode_img2 %}
+        <img src="/static/Media/{{ companyInfo.qrcode_img2 }}" alt="">
+      {% else %}
+        <img src="/static/images/code-footer.png" alt="">
+      {% endif %}
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
+<script type="text/javascript" src="/static/js/jquery.js"></script>
+<script type="text/javascript" src="/static/js/ie6orie7.js"></script>
+<script type="text/javascript" src="/static/js/swiper.min.js"></script>
+<script type="text/javascript" src="/static/js/common.js"></script>
+<script>
+$(".navlist li a").mouseover(function () {
+  $(this).addClass("active").parent().siblings().find("a").removeClass("active")
+
+})
+
+//   banner轮播
+   var swiper = new Swiper('.swiper-container1', {
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+
+         // 点击tab列表切换相关内容
+  $(".list-jump li").mouseover(function(){
+     var i = $(this).index();//下标第一种写法
+            //var i = $('tit').index(this);//下标第二种写法
+            // $(".personal").show()
+            $(this).find(".personal").show().parent().siblings(".list-jump li").find(".personal").hide()
+  });
+   $(".inventory-box").mouseleave(function(){
+         $(this).find(".personal").hide()
+       
+
+  });  
+     // 点击tab列表切换相关内容
+  $(".tab-list li").mouseover(function(){
+     var i = $(this).index();//下标第一种写法
+            //var i = $('tit').index(this);//下标第二种写法
+            $(this).addClass('active').siblings().removeClass('active');
+            $('.content-list .exhibition').eq(i).addClass('show').siblings().removeClass('show');
+  })
+       // 点击tab列表切换相关内容
+  $(".tab-list2 li").mouseover(function(){
+     var i = $(this).index();//下标第一种写法
+            //var i = $('tit').index(this);//下标第二种写法
+            $(this).addClass('active').siblings().removeClass('active');
+            $('.content-list2 .exhibition').eq(i).addClass('show').siblings().removeClass('show');
+  })
+</script>
+{% block footer_script %}
+{% endblock %}

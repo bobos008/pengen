@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+
+
+  <title>jQuery</title>
+  <style>
+    .error-main {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 60px;
+      margin-bottom: 30px;
+      color: #000;
+      text-shadow: 2px 2px 12px #000;
+    }
+
+    p {
+      font-size: 20px;
+      color: #000;
+
+    }
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin: 60px;
+    }
+
+    .left img {
+      margin-right: 50px;
+    }
+
+    .left img,
+    .right img {
+      width: 190px;
+    }
+
+    .middle img {
+      width: 260px;
+    }
+
+    .back-index {
+      text-decoration: underline;
+    }
+
+    .back-pre,
+    .back-index {
+      font-size: 18px;
+      color: #f19393;
+      margin-top: 20px
+    }
+
+    .jump {
+      height: 50px;
+      line-height: 50px;
+    }
+  </style>
+</head>
+
+<body data-psd-width="750">
+
+  <div class="error-main">
+    <h2>404 Not Found</h2>
+    <p>哎呀，您访问的页面找不到啦！</p>
+    <div class="jump"><a href="" class="back-pre">返回上一页</a>
+      <a href="" class="back-index">返回首页</a></div>
+  </div>
+
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/rem.js"></script>
+  <script src="js/fastclick.js"></script>
+
+</body>
+
+</html>

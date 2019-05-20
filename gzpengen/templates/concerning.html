@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!--第一板块  -->
+    <!--面包屑导航  -->
+     <div class="crumbs layout">
+       <a href="">首页</a>
+       <span>
+         <img src="/static/images/search  (4).png" alt="">
+       </span>
+       <a href="" class="active">关于我们</a>
+     </div>
+     <!--小标题  -->
+     <div class="big-title big-title2 layout "> 
+      <div class="layout">
+          <h2>关于我们</h2>
+      </div>
+     </div>
+    <!--tab切换  -->
+      <div class="info-box layout clearfix">
+        <ul class="about-tag fl">
+             <li class="active">公司简介</li>
+             <li>联系方式</li>
+             <li>旅游合同</li>
+             <li>预定方式</li>
+             <li>常见问题</li>
+             <li>参团说明</li>
+             <li>服务说明</li>
+        </ul>
+        <ul class="about-content fl">
+          {% if aboutus_set.brief_introduction %}
+          <li class="description show">
+            {{ aboutus_set.brief_introduction|safe }}
+          </li>
+          {% else %}
+            <li class="description show" style="font-size: 20px;">
+              没有数据！
+            </li>
+          {% endif %}
+          {% if aboutus_set.contact %}
+            <li class="description">
+              {{ aboutus_set.contact|safe }}
+            </li>
+          {% else %}
+            <li class="description" style="font-size: 20px;">
+              没有数据！
+            </li>
+          {% endif %}
+          {% if aboutus_set.Travel_contract %}
+            <li class="description">
+              {{ aboutus_set.Travel_contract|safe }}
+            </li>
+          {% else %}
+            <li class="description" style="font-size: 20px;">
+              没有数据！
+            </li>
+          {% endif %}
+          {% if aboutus_set.booking %}
+            <li class="description">
+              {{ aboutus_set.booking|safe }}
+            </li>
+          {% else %}
+            <li class="description" style="font-size: 20px;">
+              没有数据！
+            </li>
+          {% endif %}
+          {% if aboutus_set.faq %}
+            <li class="description">
+              {{ aboutus_set.faq|safe }}
+            </li>
+          {% else %}
+            <li class="description" style="font-size: 20px;">
+              没有数据！
+            </li>
+          {% endif %}
+          {% if aboutus_set.join_explain %}
+            <li class="description">
+              {{ aboutus_set.join_explain|safe }}
+            </li>
+          {% else %}
+            <li class="description" style="font-size: 20px;">
+              没有数据！
+            </li>
+          {% endif %}
+          {% if aboutus_set.server_explain %}
+            <li class="description">
+              {{ aboutus_set.server_explain|safe }}
+            </li>
+          {% else %}
+            <li class="description" style="font-size: 20px;">
+              没有数据！
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+{% endblock %}
+
+{% block footer_script %}
+
+<script>
+  $(".about-tag li").click(function(){
+     var i = $(this).index();//下标第一种写法
+            //var i = $('tit').index(this);//下标第二种写法
+            $(this).addClass('active').siblings().removeClass('active');
+            $('.about-content .description').eq(i).addClass('show').siblings().removeClass('show');
+  })
+</script>
+{% endblock %}

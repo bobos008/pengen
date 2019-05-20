@@ -1,0 +1,178 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!--第一板块  -->
+    <!--面包屑导航  -->
+     <div class="crumbs layout">
+       <a href="">首页</a>
+       <span>
+         <img src="/static/images/search  (4).png" alt="">
+       </span>
+       <a href="" class="active">超级特惠</a>
+     </div>
+      <div class="recommend layout clearfix">
+        <div class="text fl">
+          <h2>超级特惠</h2>
+          <p class="small-title">EXTRAVALUE</p>
+           <p class="number">共有<span>{{ data_num }}</span>个超值产品推荐</p>
+           <span><img src="/static/images/search  (6).png" alt=""></span>
+        </div>
+          <div class="img fl">
+            <img src="/static/images/poster (1).png" alt="">
+          </div>
+      </div>
+
+      <ul class="tag-block layout clearfix">
+        <li class="active">全部</li>
+        <li>纯玩团</li>
+        <li>精品游</li>
+        <li>品质游</li>
+        <li>全景游</li>
+        <li>深度游</li>
+      </ul>
+      <div class="contentBox">
+        <ul class="tagcontent layout show">
+          {% if data_sets %}
+            {% for data_set in data_sets %}
+              <li class="content-box clearfix">
+                <div class="img fl">
+                  <img src="/static/Media/{{ data_set.goods_image }}" alt="">
+                </div>
+                <div class="text-content fl">
+                  <h2>{{ data_set.title }}</h2>
+                  <span>包含路线</span>
+                      <p>{{ data_set.route1 }}</p>
+                      <p>{{ data_set.route2 }}</p>
+                      <p style="margin-bottom: 16px;">{{ data_set.route3 }}</p>
+                      <!-- <div>展开 <em><img src="/static/images/search  (7).png" alt=""></em></div> -->
+                      <a href="">点击咨询</a>
+                </div>
+              </li>
+            {% endfor %}
+          {% else %}
+            <li style="font-size:20px;">没有数据！</li>
+          {% endif %}
+        </ul>        
+        <ul class="tagcontent layout">
+            {% if data_sets1 %}
+            {% for data_set in data_sets1 %}
+              <li class="content-box clearfix">
+                <div class="img fl">
+                  <img src="/static/Media/{{ data_set.goods_image }}" alt="">
+                </div>
+                <div class="text-content fl">
+                  <h2>{{ data_set.title }}</h2>
+                  <span>包含路线</span>
+                      <p>{{ data_set.route1 }}</p>
+                      <p>{{ data_set.route2 }}</p>
+                      <p style="margin-bottom: 16px;">{{ data_set.route3 }}</p>
+                      <!-- <div>展开 <em><img src="/static/images/search  (7).png" alt=""></em></div> -->
+                      <a href="">点击咨询</a>
+                </div>
+              </li>
+            {% endfor %}
+            {% else %}
+              <li style="font-size:20px;">没有数据！</li>
+            {% endif %}
+          </ul>  
+        <ul class="tagcontent layout">
+            {% if data_sets2 %}
+            {% for data_set in data_sets2 %}
+              <li class="content-box clearfix">
+                <div class="img fl">
+                  <img src="/static/Media/{{ data_set.goods_image }}" alt="">
+                </div>
+                <div class="text-content fl">
+                  <h2>{{ data_set.title }}</h2>
+                  <span>包含路线</span>
+                      <p>{{ data_set.route1 }}</p>
+                      <p>{{ data_set.route2 }}</p>
+                      <p style="margin-bottom: 16px;">{{ data_set.route3 }}</p>
+                      <!-- <div>展开 <em><img src="/static/images/search  (7).png" alt=""></em></div> -->
+                      <a href="">点击咨询</a>
+                </div>
+              </li>
+            {% endfor %}
+            {% else %}
+              <li style="font-size:20px;">没有数据！</li>
+            {% endif %}
+          </ul>  
+        <ul class="tagcontent layout">
+            {% if data_sets3 %}
+            {% for data_set in data_sets3 %}
+              <li class="content-box clearfix">
+                <div class="img fl">
+                  <img src="/static/Media/{{ data_set.goods_image }}" alt="">
+                </div>
+                <div class="text-content fl">
+                  <h2>{{ data_set.title }}</h2>
+                  <span>包含路线</span>
+                      <p>{{ data_set.route1 }}</p>
+                      <p>{{ data_set.route2 }}</p>
+                      <p style="margin-bottom: 16px;">{{ data_set.route3 }}</p>
+                      <!-- <div>展开 <em><img src="/static/images/search  (7).png" alt=""></em></div> -->
+                      <a href="">点击咨询</a>
+                </div>
+              </li>
+            {% endfor %}
+            {% else %}
+              <li style="font-size:20px;">没有数据！</li>
+            {% endif %}
+          </ul>  
+        <ul class="tagcontent layout">
+            {% if data_sets4 %}
+            {% for data_set in data_sets4 %}
+              <li class="content-box clearfix">
+                <div class="img fl">
+                  <img src="/static/Media/{{ data_set.goods_image }}" alt="">
+                </div>
+                <div class="text-content fl">
+                  <h2>{{ data_set.title }}</h2>
+                  <span>包含路线</span>
+                      <p>{{ data_set.route1 }}</p>
+                      <p>{{ data_set.route2 }}</p>
+                      <p style="margin-bottom: 16px;">{{ data_set.route3 }}</p>
+                      <!-- <div>展开 <em><img src="/static/images/search  (7).png" alt=""></em></div> -->
+                      <a href="">点击咨询</a>
+                </div>
+              </li>
+            {% endfor %}
+            {% else %}
+              <li style="font-size:20px;">没有数据！</li>
+            {% endif %}
+          </ul>  
+        <ul class="tagcontent layout">
+            {% if data_sets5 %}
+            {% for data_set in data_sets5 %}
+              <li class="content-box clearfix">
+                <div class="img fl">
+                  <img src="/static/Media/{{ data_set.goods_image }}" alt="">
+                </div>
+                <div class="text-content fl">
+                  <h2>{{ data_set.title }}</h2>
+                  <span>包含路线</span>
+                      <p>{{ data_set.route1 }}</p>
+                      <p>{{ data_set.route2 }}</p>
+                      <p style="margin-bottom: 16px;">{{ data_set.route3 }}</p>
+                      <!-- <div>展开 <em><img src="/static/images/search  (7).png" alt=""></em></div> -->
+                      <a href="">点击咨询</a>
+                </div>
+              </li>
+            {% endfor %}
+            {% else %}
+              <li style="font-size:20px;">没有数据！</li>
+            {% endif %}
+          </ul>  
+      </div>
+<!--悬浮咨询窗  -->
+  <!-- <div class="layout">
+    <div class="suspension">
+    <h2>没有喜欢的行程吗</h2>
+    <p>试试旅游订制师</p>
+    <p class="p">一对一专业的订制吧</p>
+    <a href="">在线咨询</a>
+    <a href="">联系我们</a>
+    <img src="/static/images/poster (4).png" alt="">
+  </div> -->
+</div>
+{% endblock %}
