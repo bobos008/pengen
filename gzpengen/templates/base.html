@@ -58,8 +58,11 @@
         <div class="class-list fl">
           <p class="allList">全部旅游产品</p>
          <div class="inventory-box clearfix">
-              <!-- <ul class="list-jump  clearfix" style="display: block"> -->
+              {% if showMenu %}
+              <ul class="list-jump  clearfix" style="display: block">
+              {% else %}
               <ul class="list-jump  clearfix">
+              {% endif %}
                   <li class=""> 
                       <div class="NavContentLeft">
                         <a href="/indulgence/">超级特惠</a>
