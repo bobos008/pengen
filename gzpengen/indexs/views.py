@@ -49,7 +49,8 @@ def index(request):
         'TR_set5': TR_set5,
         'TR_set6': TR_set6,
         'companyInfo': companyInfo,
-        'tripShare': tripShare
+        'tripShare': tripShare,
+        'showMenu': True
     }
     return render(request, 'index.html', datas)
 
