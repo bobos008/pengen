@@ -22,7 +22,7 @@ class CompanyInfo(models.Model):
     account_number = models.CharField(u'帐号', max_length=124)
     qrcode_img1 = models.ImageField(u'公司网页头部小的二维码', help_text="图片大小为76×76px", upload_to='Media/imgs/')
     qrcode_img2 = models.ImageField(u'公司网页底部大的二维码', help_text="图片大小为122×122px", upload_to='Media/imgs/')
-    qrcode_img3 = models.ImageField(u'公司网页中部的二维码', help_text="图片大小为237x237px", upload_to="Media/imgs/")
+    # qrcode_img3 = models.ImageField(u'公司网页中部的二维码', help_text="图片大小为237x237px", upload_to="Media/imgs/")
     logo_img1 = models.ImageField(u'公司网页头部logo', help_text="图片大小为293×90px", upload_to='Media/imgs/')
     logo_img2 = models.ImageField(u'公司网页底部logo', help_text="图片大小为114×145px", upload_to='Media/imgs/')
 
