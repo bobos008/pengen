@@ -106,7 +106,7 @@ def boutique(request):
         ).order_by('-id')[:4]
         data_num = len(data_set.values('id').all())
     except:
-        companyInfo = '' 
+         
         data_sets = ''
         data_num = 0
     data_set1 = select_data(SeasonalFineProducts, choose_kw='more', trip_style=1) 
