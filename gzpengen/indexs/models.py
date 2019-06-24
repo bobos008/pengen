@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
-from __future__ import unicode_literals
 
+from __future__ import unicode_literals
 from django.db import models
+from django.db.models.signals import pre_delete, pre_save
+from django.dispatch.dispatcher import receiver
 from tinymce.models import HTMLField
 
 
 # Create your models here.
 class CompanyInfo(models.Model):
-    ''' 公司信息 '''
+    """公司信息"""
     company_id = models.AutoField(primary_key=True)
     company_name = models.CharField(u'公司名称', max_length=64)
     service_hotline = models.CharField(u'服务热线', max_length=11)
@@ -30,8 +32,17 @@ class CompanyInfo(models.Model):
         verbose_name_plural = u'公司信息'
 
 
+# 删除公司信息图片文件
+@receiver(pre_delete, sender=CompanyInfo)
+def companyinfo_delete(sender, instance, **kwargs):
+    instance.qrcode_img1.delete(False)
+    instance.qrcode_img2.delete(False)
+    instance.logo_img1.delete(False)
+    instance.logo_img2.delete(False)
+
+
 class SeasonalFineProducts(models.Model):
-    ''' 当季精品 '''
+    """当季精品"""
     TRIP_STYLE = (
         (0, u'请选择'),
         (1, u'纯玩团'),
@@ -72,8 +83,17 @@ class SeasonalFineProducts(models.Model):
         verbose_name_plural = u'当季精品'
 
 
+# 当季精品
+@receiver(pre_delete, sender=SeasonalFineProducts)
+def seasonfine_delete(sender, instance, **kwargs):
+    instance.goods_image.delete(False)
+    instance.image1.delete(False)
+    instance.image2.delete(False)
+    instance.image3.delete(False)
+
+
 class SuperAffordable(models.Model):
-    ''' 超级特惠 '''
+    """超级特惠"""
     TRIP_STYLE = (
         (0, u'请选择'),
         (1, u'纯玩团'),
@@ -115,8 +135,17 @@ class SuperAffordable(models.Model):
         verbose_name_plural = u'超级特惠'
 
 
+# 超级特惠 
+@receiver(pre_delete, sender=SuperAffordable)
+def superaffordable_delete(sender, instance, **kwargs):
+    instance.goods_image.delete(False)
+    instance.image1.delete(False)
+    instance.image2.delete(False)
+    instance.image3.delete(False)
+
+
 class ThemeRoute(models.Model):
-    ''' 主题线路 '''
+    """主题线路"""
     TRIP_STYLE = (
         (0, u'请选择'),
         (1, u'亲子游'),
@@ -158,8 +187,17 @@ class ThemeRoute(models.Model):
         verbose_name_plural = u'主题线路'
 
 
+# 主题线路 
+@receiver(pre_delete, sender=ThemeRoute)
+def themeroute_delete(sender, instance, **kwargs):
+    instance.goods_image.delete(False)
+    instance.image1.delete(False)
+    instance.image2.delete(False)
+    instance.image3.delete(False)
+
+
 class PopularExplosions(models.Model):
-    ''' 人气爆款 '''
+    """人气爆款"""
     TRIP_STYLE = (
         (0, u'请选择'),
         (1, u'纯玩团'),
@@ -200,8 +238,17 @@ class PopularExplosions(models.Model):
         verbose_name_plural = u'人气爆款'
 
 
+# 人气爆款 
+@receiver(pre_delete, sender=PopularExplosions)
+def popularexplosions_delete(sender, instance, **kwargs):
+    instance.goods_image.delete(False)
+    instance.image1.delete(False)
+    instance.image2.delete(False)
+    instance.image3.delete(False)
+
+
 class SceneryCulture(models.Model):
-    ''' 景点文化 '''
+    """景点文化"""
     id = models.AutoField(primary_key=True)
     small_title = models.CharField(u'小标题', help_text="小标题最多输入4个汉字！", null=True, max_length=4, blank=True)
     title = models.CharField(u'标题', help_text="标题最多输入12个汉字!", max_length=12)
@@ -233,8 +280,17 @@ class SceneryCulture(models.Model):
         verbose_name_plural = u'景点文化'
 
 
+# 景点文化 
+@receiver(pre_delete, sender=SceneryCulture)
+def sceneryculture_delete(sender, instance, **kwargs):
+    instance.goods_image.delete(False)
+    instance.image1.delete(False)
+    instance.image2.delete(False)
+    instance.image3.delete(False)
+
+
 class RaidersRoute(models.Model):
-    ''' 攻略路线 '''
+    """攻略路线"""
     id = models.AutoField(primary_key=True)
     small_title = models.CharField(u'小标题', help_text="小标题最多输入4个汉字！", null=True, max_length=4, blank=True)
     title = models.CharField(u'标题', help_text="标题最多输入12个汉字!", max_length=12)
@@ -266,8 +322,17 @@ class RaidersRoute(models.Model):
         verbose_name_plural = u'攻略路线'
 
 
+# 攻略线路 
+@receiver(pre_delete, sender=RaidersRoute)
+def raidersroute_delete(sender, instance, **kwargs):
+    instance.goods_image.delete(False)
+    instance.image1.delete(False)
+    instance.image2.delete(False)
+    instance.image3.delete(False)
+
+
 class CustomRoute(models.Model):
-    ''' 定制个人路线 '''
+    """定制个人路线"""
     customer_id = models.AutoField(primary_key=True)
     from_location = models.CharField(u'出发城市', max_length=124, null=True)
     customer_name = models.CharField(u'客户名字', max_length=124, default='null')
@@ -281,7 +346,7 @@ class CustomRoute(models.Model):
 
 
 class TripKnowledge(models.Model):
-    ''' 旅游知识 '''
+    """旅游知识"""
     knowledge_id = models.AutoField(primary_key=True)
     knowledge_title = models.CharField(u'旅游标题', max_length=16)
     knowledge_image = models.ImageField(u'图片', help_text="图片大小为463×335px!", upload_to='Media/imgs/')
@@ -293,8 +358,14 @@ class TripKnowledge(models.Model):
         verbose_name_plural = u'旅游知识'
 
 
+# 旅游知识
+@receiver(pre_delete, sender=TripKnowledge)
+def tripknowledge_delete(sender, instance, **kwargs):
+    isinstance.knowledge_image.delete(False)
+
+
 class AboutUs(models.Model):
-    ''' 关于我们 '''
+    """关于我们"""
     about_id = models.AutoField(primary_key=True)
     brief_introduction = HTMLField('公司简介')
     contact = HTMLField('联系方式')
@@ -309,7 +380,7 @@ class AboutUs(models.Model):
 
 
 class TripShare(models.Model):
-    ''' 旅游分享 '''
+    """旅游分享"""
     id = models.AutoField(primary_key=True)
     add_times = models.DateField(u'添加时间')
     content = HTMLField('内容')
