@@ -129,13 +129,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 # 使用nginx才使用
-# STATIC_ROOT = '/static/'
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'var/www/static/') 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/Media')
+# 指定上传文件目录
+MEDIA_ROOT = os.path.join(BASE_DIR, 'Media').replace("\\", "/")
+MEDIA_URL = '/Media/'
+
 
 # 富文本编辑器配置
 TINYMCE_DEFAULT_CONFIG = {
