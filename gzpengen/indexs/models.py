@@ -22,11 +22,11 @@ class CompanyInfo(models.Model):
     account_name = models.CharField(u'开户名', max_length=32, default="null")
     Remittances_name = models.CharField(u'汇款名称', max_length=32, default="null")
     account_number = models.CharField(u'帐号', max_length=124)
-    qrcode_img1 = models.ImageField(u'公司网页头部小的二维码', help_text="图片大小为76×76px", upload_to='Media/imgs/')
-    qrcode_img2 = models.ImageField(u'公司网页底部大的二维码', help_text="图片大小为122×122px", upload_to='Media/imgs/')
-    # qrcode_img3 = models.ImageField(u'公司网页中部的二维码', help_text="图片大小为237x237px", upload_to="Media/imgs/")
-    logo_img1 = models.ImageField(u'公司网页头部logo', help_text="图片大小为293×90px", upload_to='Media/imgs/')
-    logo_img2 = models.ImageField(u'公司网页底部logo', help_text="图片大小为114×145px", upload_to='Media/imgs/')
+    qrcode_img1 = models.ImageField(u'公司网页头部小的二维码', help_text="图片大小为76×76px", upload_to='imgs/')
+    qrcode_img2 = models.ImageField(u'公司网页底部大的二维码', help_text="图片大小为122×122px", upload_to='imgs/')
+    # qrcode_img3 = models.ImageField(u'公司网页中部的二维码', help_text="图片大小为237x237px", upload_to="imgs/")
+    logo_img1 = models.ImageField(u'公司网页头部logo', help_text="图片大小为293×90px", upload_to='imgs/')
+    logo_img2 = models.ImageField(u'公司网页底部logo', help_text="图片大小为114×145px", upload_to='imgs/')
 
     class Meta:
         verbose_name_plural = u'公司信息'
@@ -73,10 +73,10 @@ class SeasonalFineProducts(models.Model):
     contain_cost = models.TextField(u'费用包含', null=True, blank=True)
     not_contain_cost = models.TextField(u'费用不含', null=True, blank=True)
     self_funded_project = models.TextField(u'自费项目', null=True, blank=True)
-    goods_image = models.ImageField(u'头图', help_text="图片大小为456×242px！", null=True, upload_to='Media/imgs/')
-    image1 = models.ImageField(u'详情图片1', help_text="图片大小为119×87px!", upload_to='Media/imgs/')
-    image2 = models.ImageField(u'详情图片2', help_text="图片大小为119×87px!", upload_to='Media/imgs/')
-    image3 = models.ImageField(u'详情图片3', help_text="图片大小为119×87px!", upload_to='Media/imgs/')
+    goods_image = models.ImageField(u'头图', help_text="图片大小为456×242px！", null=True, upload_to='imgs/')
+    image1 = models.ImageField(u'详情图片1', help_text="图片大小为119×87px!", upload_to='imgs/')
+    image2 = models.ImageField(u'详情图片2', help_text="图片大小为119×87px!", upload_to='imgs/')
+    image3 = models.ImageField(u'详情图片3', help_text="图片大小为119×87px!", upload_to='imgs/')
     trip_style = models.IntegerField(u'旅游类型', choices=TRIP_STYLE, default=0)
 
     class Meta:
@@ -177,10 +177,10 @@ class ThemeRoute(models.Model):
     contain_cost = models.TextField(u'费用包含')
     not_contain_cost = models.TextField(u'费用不含')
     self_funded_project = models.TextField(u'自费项目')
-    goods_image = models.ImageField(u'头图', help_text="图片大小为456×242px！", null=True, upload_to='Media/imgs/', blank=True)
-    image1 = models.ImageField(u'详情图片1', help_text="图片大小为119×87px!", upload_to='Media/imgs/')
-    image2 = models.ImageField(u'详情图片2', help_text="图片大小为119×87px!", upload_to='Media/imgs/')
-    image3 = models.ImageField(u'详情图片3', help_text="图片大小为119×87px!", upload_to='Media/imgs/')
+    goods_image = models.ImageField(u'头图', help_text="图片大小为456×242px！", null=True, upload_to='imgs/', blank=True)
+    image1 = models.ImageField(u'详情图片1', help_text="图片大小为119×87px!", upload_to='imgs/')
+    image2 = models.ImageField(u'详情图片2', help_text="图片大小为119×87px!", upload_to='imgs/')
+    image3 = models.ImageField(u'详情图片3', help_text="图片大小为119×87px!", upload_to='imgs/')
     trip_style = models.IntegerField(u'旅游类型', choices=TRIP_STYLE, default=0)
 
     class Meta:
@@ -228,10 +228,10 @@ class PopularExplosions(models.Model):
     contain_cost = models.TextField(u'费用包含')
     not_contain_cost = models.TextField(u'费用不含')
     self_funded_project = models.TextField(u'自费项目')
-    goods_image = models.ImageField(u'头图', help_text="图片大小为456×242px！", null=True, upload_to='Media/imgs/')
-    image1 = models.ImageField(u'详情图片1', help_text="图片大小为119×87px!", upload_to='Media/imgs/')
-    image2 = models.ImageField(u'详情图片2', help_text="图片大小为119×87px!", upload_to='Media/imgs/')
-    image3 = models.ImageField(u'详情图片3', help_text="图片大小为119×87px!", upload_to='Media/imgs/')
+    goods_image = models.ImageField(u'头图', help_text="图片大小为456×242px！", null=True, upload_to='imgs/')
+    image1 = models.ImageField(u'详情图片1', help_text="图片大小为119×87px!", upload_to='imgs/')
+    image2 = models.ImageField(u'详情图片2', help_text="图片大小为119×87px!", upload_to='imgs/')
+    image3 = models.ImageField(u'详情图片3', help_text="图片大小为119×87px!", upload_to='imgs/')
     trip_style = models.IntegerField(u'旅游类型', choices=TRIP_STYLE, default='0')
 
     class Meta:
@@ -271,10 +271,10 @@ class SceneryCulture(models.Model):
     contain_cost = models.TextField(u'费用包含')
     not_contain_cost = models.TextField(u'费用不含')
     self_funded_project = models.TextField(u'自费项目')
-    goods_image = models.ImageField(u'头图', help_text="图片大小为456×242px！", null=True, upload_to='Media/imgs/')
-    image1 = models.ImageField(u'详情图片1', help_text="图片大小为119×87px!", upload_to='Media/imgs/')
-    image2 = models.ImageField(u'详情图片2', help_text="图片大小为119×87px!", upload_to='Media/imgs/')
-    image3 = models.ImageField(u'详情图片3', help_text="图片大小为119×87px!", upload_to='Media/imgs/')
+    goods_image = models.ImageField(u'头图', help_text="图片大小为456×242px！", null=True, upload_to='imgs/')
+    image1 = models.ImageField(u'详情图片1', help_text="图片大小为119×87px!", upload_to='imgs/')
+    image2 = models.ImageField(u'详情图片2', help_text="图片大小为119×87px!", upload_to='imgs/')
+    image3 = models.ImageField(u'详情图片3', help_text="图片大小为119×87px!", upload_to='imgs/')
 
     class Meta:
         verbose_name_plural = u'景点文化'
@@ -313,10 +313,10 @@ class RaidersRoute(models.Model):
     contain_cost = models.TextField(u'费用包含')
     not_contain_cost = models.TextField(u'费用不含')
     self_funded_project = models.TextField(u'自费项目')
-    goods_image = models.ImageField(u'头图', help_text="图片大小为456×242px！", null=True, upload_to='Media/imgs/')
-    image1 = models.ImageField(u'详情图片1', help_text="图片大小为119×87px!", upload_to='Media/imgs/')
-    image2 = models.ImageField(u'详情图片2', help_text="图片大小为119×87px!", upload_to='Media/imgs/')
-    image3 = models.ImageField(u'详情图片3', help_text="图片大小为119×87px!", upload_to='Media/imgs/')
+    goods_image = models.ImageField(u'头图', help_text="图片大小为456×242px！", null=True, upload_to='imgs/')
+    image1 = models.ImageField(u'详情图片1', help_text="图片大小为119×87px!", upload_to='imgs/')
+    image2 = models.ImageField(u'详情图片2', help_text="图片大小为119×87px!", upload_to='imgs/')
+    image3 = models.ImageField(u'详情图片3', help_text="图片大小为119×87px!", upload_to='imgs/')
 
     class Meta:
         verbose_name_plural = u'攻略路线'
@@ -349,7 +349,7 @@ class TripKnowledge(models.Model):
     """旅游知识"""
     knowledge_id = models.AutoField(primary_key=True)
     knowledge_title = models.CharField(u'旅游标题', max_length=16)
-    knowledge_image = models.ImageField(u'图片', help_text="图片大小为463×335px!", upload_to='Media/imgs/')
+    knowledge_image = models.ImageField(u'图片', help_text="图片大小为463×335px!", upload_to='imgs/')
     add_times = models.DateField(u'添加时间')
     part_content = models.TextField(u'部分文章内容', help_text='文章部分内容,用于首页显示，字数最多260个字', max_length=260)
     knowledge_content = HTMLField('文章全部内容')

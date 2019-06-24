@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.conf.urls.static import static
 from indexs import views
+from django.conf import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -32,4 +34,4 @@ urlpatterns = [
     url(r'^popular/', views.popular),
     url(r'^scenic/', views.scenic),
     url(r'^strategy/', views.strategy),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
