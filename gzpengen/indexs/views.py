@@ -52,7 +52,7 @@ def index(request):
         'tripShare': tripShare,
         'showMenu': True
     }
-    return render(request, 'index.html', datas)
+    return render(request, 'home/index.html', datas)
 
 
 def select_data(current_model, choose_kw='index', trip_style=None, limits=4):
@@ -106,7 +106,7 @@ def boutique(request):
         ).order_by('-id')[:4]
         data_num = len(data_set.values('id').all())
     except:
-         
+        companyInfo = '' 
         data_sets = ''
         data_num = 0
     data_set1 = select_data(SeasonalFineProducts, choose_kw='more', trip_style=1) 
@@ -125,7 +125,7 @@ def boutique(request):
         'data_sets5': data_set5,
         'companyInfo': companyInfo
     }
-    return render(request, 'boutique.html', datas)
+    return render(request, 'home/boutique.html', datas)
 
 
 def concerning(request):
@@ -140,7 +140,7 @@ def concerning(request):
         'aboutus_set': aboutus_set,
         'companyInfo': companyInfo
     }
-    return render(request, 'concerning.html', datas)
+    return render(request, 'home/concerning.html', datas)
 
 
 def customizedc(request):
@@ -152,7 +152,7 @@ def customizedc(request):
     datas = {
         'companyInfo': companyInfo
     }
-    return render(request, 'customizedc.html', datas)
+    return render(request, 'home/customizedc.html', datas)
 
 
 def addcustom(request):
@@ -207,7 +207,7 @@ def detail(request, table_name, new_id):
         'data': data_set,
         'companyInfo': companyInfo
     }
-    return render(request, 'details.html', datas)
+    return render(request, 'home/details.html', datas)
 
 
 def indulgence(request):
@@ -243,7 +243,7 @@ def indulgence(request):
         'data_sets5': data_set5,
         'companyInfo': companyInfo
     }
-    return render(request, 'indulgence.html', datas)
+    return render(request, 'home/indulgence.html', datas)
 
 
 def itinerary(request):
@@ -281,7 +281,7 @@ def itinerary(request):
         'data_sets6': data_set6,
         'companyInfo': companyInfo
     }
-    return render(request, 'itinerary.html', datas)
+    return render(request, 'home/itinerary.html', datas)
 
 
 def knowledge(request):
@@ -302,7 +302,7 @@ def knowledge(request):
         'tk_data': tk_set,
         'companyInfo': companyInfo
     }
-    return render(request, 'knowledge.html', datas)
+    return render(request, 'home/knowledge.html', datas)
 
 
 def popular(request):
@@ -338,7 +338,7 @@ def popular(request):
         'data_sets5': data_set5,
         'companyInfo': companyInfo
     }
-    return render(request, 'popular.html', datas)
+    return render(request, 'home/popular.html', datas)
 
 
 def scenic(request):
@@ -365,7 +365,7 @@ def scenic(request):
         'data_set': data_set,
         'companyInfo': companyInfo
     }
-    return render(request, 'scenic.html', datas)
+    return render(request, 'home/scenic.html', datas)
 
 
 def strategy(request):
@@ -392,4 +392,4 @@ def strategy(request):
         'data_set': data_set,
         'companyInfo': companyInfo
     }
-    return render(request, 'strategy.html', datas)
+    return render(request, 'home/strategy.html', datas)

@@ -1,0 +1,41 @@
+{% extends './base.html' %}
+
+{% block content %}
+    <!--第一板块  -->
+    <!--面包屑导航  -->
+     <div class="crumbs layout">
+       <a href="">首页</a>
+       <span>
+         <img src="/static/images/search  (4).png" alt="">
+       </span>
+       <a href="" class="active">旅游知识</a>
+     </div>
+      <div><img src="/static/images/chai.png" alt=""></div>
+     <!--小标题  -->
+     <div class="big-title big-title2 layout "> 
+      <div class="layout">
+          <h2>旅游知识</h2>
+      </div>
+     </div>
+    <!--列表内容  -->
+    <ul class="tourism layout">
+      {% if tk_data %}
+        {% for tk in tk_data %}
+          <li>
+            <a href="">
+              <img src="/static/Media/{{ tk.knowledge_image }}" alt="">
+              <div class="content">
+                  <h2>{{ tk.knowledge_title }}</h2>
+              <span>{{ tk.add_times }}</span>
+              <p>
+                {{ tk.part_content }}
+              </p>
+              </div>
+            </a>
+          </li>
+        {% endfor %}
+      {% else %}
+      <li style="font-size:20px;">没有数据！</li>
+      {% endif %}
+    </ul>
+{% endblock %}

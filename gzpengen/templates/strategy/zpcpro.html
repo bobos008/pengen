@@ -1,0 +1,807 @@
+
+<!doctype html>
+<head>
+<meta charset="utf-8">
+<title>打算去北京旅游,求攻略和费用</title>
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=9;IE=8;IE=7;IE=EDGE">
+<script src="/static/zpcpro/files/jquery.min.js"></script>
+<script>
+  $.ajax({
+			url: "/zpcpro_data/",
+			type: 'GET',
+			success: function(res) {
+				tmp_name = res.username;
+				tmp_phone = res.phone_number
+				img_url = res.img_url
+				$("#phone-number").text(tmp_phone);
+				$('.tmp_phone').text(tmp_phone);
+				$('.tmp_name').text(tmp_name);
+        		tmp_code_img = "<img src='" + '/Media/' + img_url + "'>";
+				var img_obj = document.getElementById('add_img')
+				var img_obj1 = document.getElementById('add_img1')
+				img_obj.src = '/Media/' + img_url
+				img_obj1.src = '/Media/' + img_url 
+				// window.setInterval("change_info(user_info)", 3000)
+			}
+		});
+</script>
+<link href="/static/zpcpro/files/css.css" rel="stylesheet" type="text/css">
+<link href="/static/zpcpro/files/style.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" type="text/css" href="/static/zpcpro/files/jquery.fancybox-1.3.4.css">
+<script src="/static/zpcpro/files/jquery.lazyload.js"></script>
+<style>
+	.wechatId{color:red}
+</style>
+</head>
+
+<!------------PN00192------------->
+<body class="Entry-body">
+<div>
+  <div> 
+    <!--header-->
+    <div class="AppHeader clearfix">
+      <div class="AppHeader-inner clearfix"> <a href="javascript:;"><img src="/static/zpcpro/images/logo.jpg" class="Icon Icon--logo lazyload"  width="64" height="30"></a>
+        <div class="AppHeader-nav"> <a class="AppHeader-navItem" href="#">首页</a> <a class="AppHeader-navItem" href="#">资讯</a> <a class="AppHeader-navItem" href="#">酒店</a> </div>
+        <div class="SearchBar">
+          <div class="SearchBar-toolWrapper">
+            <form class="SearchBar-tool" action="#">
+              <div class="SearchBar-input Input-wrapper Input-wrapper--grey">
+                <input type="text"  value="" class="Input" placeholder="搜索你感兴趣的内容…"/>
+                <button class="btnsearch"  type="button"></button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="AppHeader-userInfo">
+          <div class="AppHeader-profile"> <a class="Button AppHeader-login Button--blue" type="button" id="show1" href="#">登录</a> <a class="Button Button--primary Button--blue" type="button"  id="show2" href="#">加入知道</a> </div>
+        </div>
+        
+        <!--PageHeader-->
+        
+        <div class="PageHeader">
+          <div class="QuestionHeader-content">
+            <div class="QuestionHeader-main">
+              <h1 class="QuestionHeader-title askQuestion"><span class="place"></span>到北京旅游怎么玩比较好？大约需要几天？费用多少？有当地导游推荐一下</h1>
+            </div>
+            <div class="QuestionHeader-side">
+              <div class="QuestionButtonGroup"> <a class="Button Button--primary Button--blue"   id="show3" href="login.html">关注问题</a> <a class="Button Button--blue btnwrit" type="button" id="show4" href="join.html" > 写回答 </a> </div>
+            </div>
+          </div>
+        </div>
+        <!--PageHeader--> 
+      </div>
+    </div>
+    
+    <!--header-->
+    
+    <main class="App-main">
+      <div class="QuestionHeader">
+        <div class="QuestionHeader-content">
+          <div class="QuestionHeader-main">
+            <div class="QuestionHeader-tags">
+              <div class="QuestionHeader-topics clearfix">
+                <div class="Tag QuestionTopic"> <span class="Tag-content"><a class="TopicLink" href="#">北京旅游攻略和费用</a></span> </div>
+              </div>
+            </div>
+            <h1 class="QuestionHeader-title askQuestion1"><!--<span class="place"></span>-->最近打算去北京旅游，想问下大家去哪里最好玩，住哪里方便、费用多少，希望大家多多建议！</h1>
+            <div class="QuestionHeader-detail">
+              <div class="QuestionRichText QuestionRichText--expandable QuestionRichText--collapsed">
+                <div>计划近段时间去北京玩，请问有没有去过的朋友？麻烦介绍下玩哪些地方比较好，省心省钱？有没有好的导游介绍，希望去过的朋友，能给些建议，顺便分享一下你们的旅游美图！万分感谢！</div>
+              </div>
+            </div>
+          </div>
+          <div class="QuestionHeader-side">
+            <div class="QuestionFollowStatus">
+              <div class="NumberBoard QuestionFollowStatus-counts">
+                <div class="NumberBoard-item">
+                  <div class="NumberBoard-name">关注者</div>
+                  <div class="NumberBoard-value"> 
+                    
+                  </div>
+                </div>
+                <div class="NumberBoard-divider"> </div>
+                <div class="NumberBoard-item">
+                  <div class="NumberBoard-name">被浏览</div>
+                  <div class="NumberBoard-value"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="QuestionHeader-footer">
+          <div class="QuestionHeader-footer-inner clearfix">
+            <div class="QuestionHeader-main QuestionHeader-footer-main">
+              <div class="QuestionHeaderActions"> <a class="apinglun"  href="#"> 10  条评论</a> <a class="ashare" href="#">分享</a> <a class="ayaoqing" href="#">邀请回答</a> <a class="amore" href="#"></a> </div>
+              <div class="QuestionHeader-actions"> </div>
+            </div>
+            <div class="QuestionHeader-side">
+              <div class="QuestionButtonGroup"> <a class="Button Button--primary Button--blue" href="#">关注问题</a> <a class="Button Button--blue btnwrit" href="#"> 写回答 </a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div> </div>
+      <div class="Question-main clearfix">
+        <div class="Question-mainColumn">
+          <div class="QuestionAnswers-answers">
+            <div class="Card">
+              <dl class="anstit">
+                <dt>10  个回答</dt>
+                <dd> <a href="#" class="asort">默认排序</a>
+                  <ul class="popmenu">
+                    <li><a href="#">默认排序</a></li>
+                    <li><a href="#">按时间排序</a></li>
+                  </ul>
+                </dd>
+              </dl>
+              
+              <!--qlist-->
+              <div class="qlist">
+                <div class="userxinx clearfix"> <img src="/static/zpcpro/images/Z80a0q000000g7451FA0E_C_180_180.jpg" class="img" >
+                  <div class="text">
+                    <h3><a href="#">小小喵星</a></h3>
+                  </div>
+                </div>
+                <div class="zantong"><a href="#">868 人赞同了该回答</a></div>
+                <div class="qcontent">
+                  <div class="qcont">
+                    <div style="font-size:18px; line-height:2">
+                      <p> 我是小喵，喜欢旅行更喜欢记录，每去一个地方都喜欢用相机记录下来， 前段时间在北京玩了几天，先晒照！</p>
+                      <p>
+                      <img alt="" src="/static/zpcpro/images/001.jpg" width="100%"/><br/><br/>
+					  <img alt="" src="/static/zpcpro/images/002.jpg" width="100%"/><br/><br/>
+					  <img alt="" src="/static/zpcpro/images/003.jpg" width="100%"/>
+                      </p>
+<p>&nbsp; </p>
+   <p > <span style="font-size: 26px">分享一下我三天的行程安排：</span><br>
+第一天： 【天安门广场+毛泽东纪念堂+人民英雄纪念碑+故宫等】。这几个景点是去北京必需要去看看的，历史的见证啊，那是一个时代，圆爸妈首都之情；<br>
+第二天： 【八达岭长城+圆明园】，不到长城非好汉，从小的梦想！一步一个脚印的去感受古人的足迹。<br>
+
+第三天： 一大早，从北京市内开启 【颐和园+天坛+水立方+鸟巢】 一日游之旅，欣赏北京的地标性景点，吃吃喝喝看看，深入感受北京。<br>
+这三天玩下来我们一点没操心，全程安排的特别周到。也才花了1200多，吃的都是北京特色菜，住的酒店环境也很好。要知道北京吃住行什么都贵，所以真的太划算啦。<br>
+最重要的是，全程没有一个购物店，专业又贴心，的确是高品质纯玩，所以强烈推荐！<br>
+<span style="font-size: 26px">关于住宿选择的总结分享：</span><br>
+1、如果是自由行不要跟机场、车站出口处的拉客仔或拉客大妈去他们推荐的酒店。<br>
+2、北京酒店淡旺季差别很大，不要因为淡季来过很便宜就以为全年都是这样的价格。<br>
+3、北京的酒店都需要预定，否则有可能因为后面的客人的预定而不能让你续住。所以到北京之前最好确定好房间，特别是晚上临时找住处会很被动。总之，酒店一定得提前确定下来！<br>
+我出发前比较了好几家，最后还是觉得<span class="tmp_name"></span>制定的行程及帮我们安排的酒店无论是从行程的来回上还是性价比上都更好。<br>
+小算了一下，玩加起来至少要2000块钱以上了，还有诸多不可预估的麻烦，<span class="tmp_name"></span>安排即省心又省钱，安排的住宿也很有特色，最重要的是自由度还高，所以果断选择了相信<span class="tmp_name"></span>！<br>
+如果你想了解可以加她微信咨询一下，她是个时常带着微笑的女孩子，会很乐意为您解答的。<br>
+<span class="tmp_name"></span>：<span style="color: red"><span class="tmp_phone"></span>（微信同号）</span><br>
+附上住宿美照一张：
+</p>
+<img src="/static/zpcpro/images/yun.jpg" alt="" style="width: 100%">
+<p><span style="font-size: 26px">必须注意的小细节：</span><br>
+1、北京景点太分散，除非功课做的特别好，否则不建议自己玩，很浪费时间 ；<br>
+2、衣物要提前备好，穿运动鞋最好；<br>
+3、在启程之前要做好大致的行程安排、 因为好订酒店，不然你都搞不清楚要住哪里，尤其旺季临时订肯定没房，人超级多哦；<br>
+4、不要轻信在街上“跑路单”的出租车和顺风车司机的鬼话，说50元载你目的地，很近呀，其实他们就是把你们卖给其他旅行社赚钱，一定要牢记天下没有免费的午餐，不然你至少要多花3000以上的费用。<br>
+5、找定制师的话再次推荐当地<span class="tmp_name"></span>，电话/微信同号：<span style="color: red"><span class="tmp_phone"></span></span>，能量身定制行程、安排住宿很有特色、行程安排合理，最重要是能够玩的轻松开心，全程拍拍拍<br>
+6、防晒用品：墨镜、阳伞、遮阳帽、防晒霜（指数要高）、润唇膏等可以有效的防止紫外线，如果不采取任何防晒措施的话，皮肤很容易被晒黑或晒伤。<br>
+7、药物：根据自己的健康状况，还要带上所需要的常备药品如消炎、止痛、晕车晕船、清热解毒的药品，风油精，万金油等。<br>
+<span style="font-size: 26px">分享吃货行动记：</span><br><span class="tmp_name"></span>给我们普及了北京旅游不容错过的美食，随便也分享给大家。<br>
+1、王府井小吃街：灌肠、爆肚、冰糖葫芦、老北京酸奶 茶汤、没有 臭豆腐、烤玉米、章鱼小丸子、羊肉串<br>
+2、北京全聚德：烤鸭、盐水鸭肝等经典菜式<br>
+3、牛街：江米凉糕、蜜三刀、豌豆黄<br>
+4、陈记卤煮小肠：蓑衣黄瓜、陈记卤煮小肠、卤煮菜底、 炒肝、小肠、肺头、焦溜肥肠、灌肠、卤煮小肠<br>
+5、便宜坊烤鸭：焖炉式烤鸭的代表<br>
+<img src="/static/zpcpro/images/kaoya.jpg" alt="" style="width: 100%">
+以上是<span class="tmp_name"></span>普及的北京美食分布情况,还需要了解其他的可以加她微信咨询：<span style="color: red"><span class="tmp_phone"></span>（微信同号）</span><br>
+人生中最美好的就是你爱着的人，看过的风景，还有一路留下的记忆。愿您的旅途也留下美好的回忆！</p>
+                    </div>
+                    <div class="ContentItem-time">编辑于 6天前</div>
+                  </div>
+                  <div class="contbtn"> <a href="#" class="Button VoteButton" >
+                    <div class="upicon"></div>
+                    <script>document.write(Math.floor(Math.random()*10+1))</script>K</a> <a href="#" class="Button VoteButton">
+                    <div class="downicon"></div>
+                    </a> <a href="#" class="btnshare">分享</a> <a href="#" class="btncoll">收藏</a> <a href="#" class="btngx">感谢</a> </div>
+                </div>
+                <div class="replybox">
+                  <h3>相关回复</h3>
+                  <ul class="replylist">
+                    <li>
+                      <dl class="clearfix">
+                        <dt><img src="/static/zpcpro/images/20170716000350805080.jpg" class="imgbox"><strong>欢喜过新年</strong></dt>
+                        <dd><span style="float:right; margin-left:50px; font-size:12px; color:#FF9900">回复</span>5天前</dd>
+                      </dl>
+                      <div style="font-size:15px; line-height:2">
+                        <p>刚好我也想去玩几天，能把你去北京的经验说一下吗？然后还有大概费用是多少？谢谢了<img border="0" src="/static/zpcpro/images/83.gif"><img border="0" src="/static/zpcpro/images/63.gif"> </p>
+                        <p class="weixinAudio" style="width:58%; display:none;">
+                            <audio src="" id="media" width="1" height="1" preload=""></audio>
+                            <span id="audio_area" class="db audio_area">
+                                <span class="audio_wrp db">
+                                    <span class="audio_play_area">
+                                        <i class="icon_audio_default"></i>
+                                        <i class="icon_audio_playing"></i>
+                                    </span>
+                                    <span id="audio_length" class="audio_length tips_global">23″</span>
+                                    <span class="db audio_info_area">
+                                        <span class="audio_source tips_global">语音消息</span>
+                                    </span>
+                                    <span id="audio_progress" class="progress_bar" style="width: 2.81931%;"></span>
+                                </span>
+                            </span>
+                        </p>
+                      </div>
+                    </li>
+                    <li>
+                      <dl class="clearfix">
+                        <dt><img src="/static/zpcpro/images/Z80a0q000000g7451FA0E_C_180_180.jpg" class="imgbox"><strong>小小喵星</strong></dt>
+                        <dd><span style="float:right; margin-left:50px; font-size:12px; color:#FF9900">回复</span>5天前</dd>
+                      </dl>
+                      <div style="font-size:15px; line-height:2">
+                        <p>北京的风景虽然非常吸引人，但大家一定要提前安排好行程，我在去之前就做了半个月的功课，再加上游玩后的一些感受，总结了一些经验，你看一下上面内容，希望对你有所帮助。 </p>
+                         <p>给你她的联系方式-<span class="wechatName"><span class="tmp_name"></span></span> <span class="wechatId" bind-id="keyid"><span class="tmp_phone"></span></span> </p>准备去北京的朋友可以免费咨询、定制和规划行程，就是根据你们的时间和需求为你们设计出一条合理的路线，这点特别赞！几天下来费用每人一千多，性价比很高，再也不用到处找攻略那样麻烦了！有什么问题直接问她，人很热情的哦！ </p>
+                      </div>
+                    </li>
+                    <li>
+                      <dl class="clearfix">
+                        <dt><img src="/static/zpcpro/images/20170716005866086608.jpg" class="imgbox"><strong>南方小民</strong></dt>
+                        <dd><span style="float:right; margin-left:50px; font-size:12px; color:#FF9900">回复</span>2天前</dd>
+                      </dl>
+                      <div style="font-size:15px; line-height:2">  确实，我找的也是<span class="wechatName"><span class="tmp_name"></span></span>，找对了才能玩的开心，不然就是浪费钱，现在旅游市场比较混乱，网上负面信息太多了，低价团、购物、自费、恐吓和强制的问题，比比皆是，一不留神就要掉进坑里。我这次去选择了<span class="wechatName"><span class="tmp_name"></span></span>，完全没有出现这样的问题，我和我的家人都很开心，真心不错，楼主推荐的对！
+                      </div>
+                    </li>
+                    <li>
+                      <dl class="clearfix">
+                        <dt><img src="/static/zpcpro/images/20170716012559325932.jpg" class="imgbox"><strong>花样少年</strong></dt>
+                        <dd><span style="float:right; margin-left:50px; font-size:12px; color:#FF9900">回复</span>2天前</dd>
+                      </dl>
+                      <div style="font-size:15px; line-height:2">
+                      	谢谢你的介绍，请问这样好的服务费用怎么样啊？都包含了那些？
+                      </div>
+                    </li>
+                    <li>
+                      <dl class="clearfix">
+                        <dt><img src="/static/zpcpro/images/20170716142480678067.jpg" class="imgbox"><strong>花儿红</strong></dt>
+                        <dd><span style="float:right; margin-left:50px; font-size:12px; color:#FF9900">回复</span>1天前</dd>
+                      </dl>
+                      <div style="font-size:15px; line-height:2">
+                        	请问有<span class="wechatName"><span class="tmp_name"></span></span>的微信吗？求推荐！
+                            <div class="weixinAudio-2" style="width:77%; display:none;">
+                                <audio src="" id="media" width="1" height="1" preload=""></audio>
+                                <span id="audio_area" class="db audio_area">
+                                    <span class="audio_wrp db">
+                                        <span class="audio_play_area">
+                                            <i class="icon_audio_default"></i>
+                                            <i class="icon_audio_playing"></i>
+                                        </span>
+                                        <span id="audio_length" class="audio_length tips_global">23″</span>
+                                        <span class="db audio_info_area">
+                                            <span class="audio_source tips_global">语音消息</span>
+                                        </span>
+                                        <span id="audio_progress" class="progress_bar" style="width: 2.81931%;"></span>
+                                    </span>
+                                </span>
+                            </div>  
+                      </div>
+                    </li>
+                    <li>
+                      <dl class="clearfix">
+                        <dt><img src="/static/zpcpro/images/Z80a0q000000g7451FA0E_C_180_180.jpg" class="imgbox"><strong>小小喵星</strong></dt>
+                        <dd><span style="float:right; margin-left:50px; font-size:12px; color:#FF9900">回复</span>1天前</dd>
+                      </dl>
+                      <div style="font-size:15px; line-height:2">
+                        <p> <span class="wechatName"><span class="tmp_name"></span></span>的微信:<span class="wechatId" bind-id="keyid"><span class="tmp_phone"></span></span> <a style="color: #FF0000">（←点击复制微信）</a></p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!--qlist--> 
+              
+              <!--qlist-->
+              <div class="qlist">
+                <div class="userxinx clearfix"> <img src="/static/zpcpro/images/20170717003571087108.jpg" class="img" >
+                  <div class="text">
+                    <h3><a href="#">放假快乐</a></h3>
+                  </div>
+                </div>
+                <div class="zantong"><a href="#">66 人赞同了该回答</a></div>
+                <div class="qcontent">
+                  <div class="qcont">
+                    <div style="font-size:18px; line-height:2">
+					<p> 找当地向导自由行好处就是可以随走随停，看天气，看心情。“ 北京这座城，吹过的风都是文化，踩的地全是历史”，所以，有时候带着耳机，听着自己喜欢的歌，在北京胡同走一走，也是对自己的一种“犒赏”，当然你得有个人带你玩，你才会这么惬意~<img border="0" alt="" src="/static/zpcpro/images/21.gif" /><img border="0" alt="" src="/static/zpcpro/images/21.gif" /> </p>
+                      <p> <img alt="" src="/static/zpcpro/images/004.jpg" width="100%"/><br/><br/>
+                      <img alt="" src="/static/zpcpro/images/005.jpg" width="100%"/>
+                      </p>
+                    </div>
+                    <div class="ContentItem-time">编辑于 4天前</div>
+                  </div>
+                  <div class="contbtn"> <a href="#" class="Button VoteButton" >
+                    <div class="upicon"></div>
+                    <script>document.write(Math.floor(Math.random()*10+1))</script>K</a> <a href="#" class="Button VoteButton">
+                    <div class="downicon"></div>
+                    </a> <a href="#" class="btnshare">分享</a> <a href="#" class="btncoll">收藏</a> <a href="#" class="btngx">感谢</a> </div>
+                </div>
+                <div class="replybox">
+                  <h3>相关回复</h3>
+                  <ul class="replylist">
+                    <li>
+                      <dl class="clearfix">
+                        <dt><img src="/static/zpcpro/images/20170716223365376537.jpg" class="imgbox"><strong>上甘岭南</strong></dt>
+                        <dd><span style="float:right; margin-left:50px; font-size:12px; color:#FF9900">回复</span>3天前</dd>
+                      </dl>
+                      <div style="font-size:15px; line-height:2"> 楼主请问一下，你说的北京<span class="wechatName"><span class="tmp_name"></span></span>她们有住宿和餐饮安排的吗？北京有哪些好玩的景点呢？然后游玩花了多少钱呢？</div>
+                    </li>
+                    <li>
+                      <dl class="clearfix">
+                        <dt><img src="/static/zpcpro/images/20170716223613371337.jpg" class="imgbox"><strong>放假快乐</strong></dt>
+                        <dd><span style="float:right; margin-left:50px; font-size:12px; color:#FF9900">回复</span>3天前</dd>
+                      </dl>
+                      <div style="font-size:15px; line-height:2"> 北京好玩的景点有很多：像天安门广场、故宫、鸟巢水立方、长城还有圆明园等等。她们主要就是做品质自由行，全程很注重品质，不管是住宿，还有门票，行程，交通都安排的特别到位，安排的向导给都很和善很关心人，安排的接站管家也是一个很幽默的，特别细心，驾车技术熟练，全程玩的很开心。想去北京的可以加下她微信<span class="wechatId" bind-id="keyid"><span class="tmp_phone"></span></span> <a style="color: #FF0000">（←点击复制微信）</a>
+					  <img alt="" src="/static/zpcpro/images/006.jpg" width="100%"/></div>
+                    </li>
+                    <li>
+                      <dl class="clearfix">
+                        <dt><img src="/static/zpcpro/images/20170716224278377837.jpg" class="imgbox"><strong>上甘岭南</strong></dt>
+                        <dd><span style="float:right; margin-left:50px; font-size:12px; color:#FF9900">回复</span>3天前</dd>
+                      </dl>
+                      <div style="font-size:15px; line-height:2"> 来北京肯定要去因为《延禧攻略》又火了一把的故宫这些地儿！</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!--qlist-->
+              
+              
+              <!--qlist-->
+              <div class="qlist">
+                <div class="userxinx clearfix"> <img src="/static/zpcpro/images/20170717003048154815.jpg" class="img" >
+                  <div class="text">
+                    <h3><a href="#">花海</a></h3>
+                  </div>
+                </div>
+                <div class="zantong"><a href="#">82 人赞同了该回答</a></div>
+                <div class="qcontent">
+                  <div class="qcont">
+                    <div style="font-size:18px; line-height:2"><span>北京我去了两次了，都是找的<span class="wechatName"><span class="tmp_name"></span></span>，正如大家推荐的一样，去北京，交给她你就不需要操心。特别是第二次，是国庆节带我家小可爱，<span class="wechatName"><span class="tmp_name"></span></span>的贴心服务、热情的接待、细心的安排，让我玩的很开心。</span>
+					<img alt="" src="/static/zpcpro/images/007.jpg" width="100%"/>
+					</div>
+                    <div class="ContentItem-time">编辑于 5天前</div>
+                  </div>
+                  <div class="contbtn"> <a href="#" class="Button VoteButton" >
+                    <div class="upicon"></div>
+                    <script>document.write(Math.floor(Math.random()*10+1))</script>K</a> <a href="#" class="Button VoteButton">
+                    <div class="downicon"></div>
+                    </a> <a href="#" class="btnshare">分享</a> <a href="#" class="btncoll">收藏</a> <a href="#" class="btngx">感谢</a> </div>
+                </div>
+                <div class="replybox">
+                  <h3>相关回复</h3>
+                  <ul class="replylist">
+                    <li>
+                      <dl class="clearfix">
+                        <dt><img src="/static/zpcpro/images/20170716220632913291.jpg" class="imgbox"><strong>seper大军子</strong></dt>
+                        <dd><span style="float:right; margin-left:50px; font-size:12px; color:#FF9900">回复</span>3天前</dd>
+                      </dl>
+                      <div style="font-size:15px; line-height:2"> 想去北京了解我国灿烂的历史和悠久的文化，寻找故事传说中昔日的辉煌与奢华。话说楼主把带你们玩的向导联系方式给我呗~~~</div>
+                    </li>
+                    <li>
+                      <dl class="clearfix">
+                        <dt><img src="/static/zpcpro/images/20170716221069096909.jpg" class="imgbox"><strong>粉红女郎</strong></dt>
+                        <dd><span style="float:right; margin-left:50px; font-size:12px; color:#FF9900">回复</span>3天前</dd>
+                      </dl>
+                      <div style="font-size:15px; line-height:2">楼主是联系的<span class="wechatName"><span class="tmp_name"></span></span>吗，我有7天假期，不知道够不够北京全部玩到？</div>
+                    </li>
+					<li>
+                      <dl class="clearfix">
+                        <dt><img src="/static/zpcpro/images/100t080000003hsmn818e_c_80_80.jpg" class="imgbox"><strong>桃木舒</strong></dt>
+                        <dd><span style="float:right; margin-left:50px; font-size:12px; color:#FF9900">回复</span>3天前</dd>
+                      </dl>
+                      <div style="font-size:15px; line-height:2"> 同问，我是3天的时间，<span class="wechatName"><span class="tmp_name"></span></span>可以帮我设计线路吗？</div>
+                    </li>
+					<li>
+                      <dl class="clearfix">
+                        <dt><img src="/static/zpcpro/images/20170717003048154815.jpg" class="imgbox"><strong>花海</strong></dt>
+                        <dd><span style="float:right; margin-left:50px; font-size:12px; color:#FF9900">回复</span>3天前</dd>
+                      </dl>
+                      <div style="font-size:15px; line-height:2">具体你们可以加<span class="wechatName"><span class="tmp_name"></span></span>微信自己咨询一下吧，她都可以免费给你们设计路线的，人非常好，而且回复各种问题非常有耐心也非常细心，本人吐血推荐~<span class="wechatId" bind-id="keyid"><span class="tmp_phone"></span></span> <a style="color: #FF0000">（←点击复制微信） </a> 这是她的<span class="tmp_phone"></span>~~~最后放上这次北京游玩图~~Perfect travel（完美旅行）
+					  <img alt="" src="/static/zpcpro/images/008.jpg" width="100%"/></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!--qlist--> 
+              
+              <!--qlist-->
+              <div class="qlist">
+                <div class="userxinx clearfix"> <img src="/static/zpcpro/images/20170717003475357535.jpg" class="img" >
+                  <div class="text">
+                    <h3><a href="#">淘气小斌</a></h3>
+                  </div>
+                </div>
+                <div class="zantong"><a href="#">35 人赞同了该回答</a></div>
+                <div class="qcontent">
+                  <div class="qcont">
+                    <div style="font-size:18px; line-height:2">之前我带父母在北京游玩了五天，选的是<span class="wechatName"><span class="tmp_name"></span></span>的5日品质游，哈哈，精华的地方都玩到了，随手一拍就是风景大片，美不胜收！但是呢，最大的感受就是北京的景点过于分散，自己玩容易走回头路，非常浪费时间，我个人觉得现在国内的成熟的旅游景点比如北京这样的，最好还是结伴玩，可以请一个导游，毕竟出来玩，重要的是轻松和开心嘛！
+					<img alt="" src="/static/zpcpro/images/009.jpg" width="100%"/></div>
+                    <div class="ContentItem-time">编辑于 4天前</div>
+                  </div>
+                  <div class="contbtn"> <a href="#" class="Button VoteButton" >
+                    <div class="upicon"></div>
+                    <script>document.write(Math.floor(Math.random()*10+1))</script>K</a> <a href="#" class="Button VoteButton">
+                    <div class="downicon"></div>
+                    </a> <a href="#" class="btnshare">分享</a> <a href="#" class="btncoll">收藏</a> <a href="#" class="btngx">感谢</a> </div>
+                </div>
+                <div class="replybox">
+                  <h3>相关回复</h3>
+                  <ul class="replylist">
+                    <li>
+                      <dl class="clearfix">
+                        <dt><img src="/static/zpcpro/images/touxiang_0001.jpg" class="imgbox"><strong>阿木</strong></dt>
+                        <dd><span style="float:right; margin-left:50px; font-size:12px; color:#FF9900">回复</span>4天前</dd>
+                      </dl>
+                      <div style="font-size:15px; line-height:2"> 也很想和父母一起出去旅游，没假期，羡慕ing~</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!--qlist-->
+              
+              <!--qlist-->
+              <div class="qlist">
+                <div class="userxinx clearfix"> <img src="/static/zpcpro/images/20170717002877997799.jpg" class="img" >
+                  <div class="text">
+                    <h3><a href="#">田园青草</a></h3>
+                  </div>
+                </div>
+                <div class="zantong"><a href="#">199 人赞同了该回答</a></div>
+                <div class="qcontent">
+                  <div class="qcont">
+                    <div style="font-size:18px; line-height:2">
+                     <p>人生就像西直门立交桥，哪里都是出口；</p>
+<p>生活就像长安街，开进去就不能调头；</p>
+<p>心情就像二环路，堵得慌；</p>
+<p>爱情就像三环路，顺时激情四射，堵时撕心裂肺；</p>
+<p>婚姻就像北京站，进出都很难！</p>
+<p>所以，跑遍了北京，就看透了人生！</p>
+                      	<span>
+                        	<img alt="" src="/static/zpcpro/images/010.jpg" width="100%"/>
+</span>
+                    </div>
+                    <div class="ContentItem-time">编辑于 5天前</div>
+                  </div>
+                  <div class="contbtn"> <a href="#" class="Button VoteButton" >
+                    <div class="upicon"></div>
+                    <script>document.write(Math.floor(Math.random()*10+1))</script>K</a> <a href="#" class="Button VoteButton">
+                    <div class="downicon"></div>
+                    </a> <a href="#" class="btnshare">分享</a> <a href="#" class="btncoll">收藏</a> <a href="#" class="btngx">感谢</a> </div>
+                </div>
+              </div>
+              <!--qlist-->
+              
+              <!--qlist-->
+              <div class="qlist">
+                <div class="userxinx clearfix"> <img src="/static/zpcpro/images/201707162215763476341.jpg" class="img" >
+                  <div class="text">
+                    <h3><a href="#">我爱北部</a></h3>
+                  </div>
+                </div>
+                <div class="zantong"><a href="#">69 人赞同了该回答</a></div>
+                <div class="qcontent">
+                  <div class="qcont">
+                    <div style="font-size:18px; line-height:2">逛北京胡同，漫步北京青砖灰瓦的街道,观赏北方水乡美景，感受八旗子弟和富甲商人的别样生活。
+					<img alt="" src="/static/zpcpro/images/011.jpg" width="100%"/>
+					</div>
+                    <div class="ContentItem-time">编辑于 3天前</div>
+                  </div>
+                  <div class="contbtn"> <a href="#" class="Button VoteButton" >
+                    <div class="upicon"></div>
+                    <script>document.write(Math.floor(Math.random()*10+1))</script>K</a> <a href="#" class="Button VoteButton">
+                    <div class="downicon"></div>
+                    </a> <a href="#" class="btnshare">分享</a> <a href="#" class="btncoll">收藏</a> <a href="#" class="btngx">感谢</a> </div>
+                </div>
+                <div class="replybox">
+                  <h3>相关回复</h3>
+                  <ul class="replylist">
+                    <li>
+                      <dl class="clearfix">
+                        <dt><img src="/static/zpcpro/images/20170716225372457245.jpg" class="imgbox"><strong>小青蛙go</strong></dt>
+                        <dd><span style="float:right; margin-left:50px; font-size:12px; color:#FF9900">回复</span>2天前</dd>
+                      </dl>
+                      <div style="font-size:15px; line-height:2"> 点赞 <img border="0" alt="" src="/static/zpcpro/images/79.gif" /></div>
+                    </li>
+                    <li>
+                      <dl class="clearfix">
+                        <dt><img src="/static/zpcpro/images/201707162215763476341.jpg" class="imgbox"><strong>我爱北部</strong></dt>
+                        <dd><span style="float:right; margin-left:50px; font-size:12px; color:#FF9900">回复</span>2天前</dd>
+                      </dl>
+                      <div style="font-size:15px; line-height:2"> 很多人问北京是跟团好还是自由行好？ 可以肯定的是，不管你去哪个地方有个熟悉的人带着您肯定是最好的。 出门在外有很多的不便，大多旅游城市都比较黑，能找个可靠的人带你就不用自己瞎折腾了，本身出门旅行就是为了散心的，事事都操心就很难玩的好，要享受旅行的过程。所以建议大家找个靠谱的人带你玩很重要！</div>
+                    </li>
+					<li>
+                      <dl class="clearfix">
+                        <dt><img src="/static/zpcpro/images/300k060000001lz1z442B_C_180_180.jpg" class="imgbox"><strong>cs-timelapse</strong></dt>
+                        <dd><span style="float:right; margin-left:50px; font-size:12px; color:#FF9900">回复</span>2天前</dd>
+                      </dl>
+                      <div style="font-size:15px; line-height:2">支持楼上所说！</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!--qlist--> 
+              
+              <!--qlist-->
+              <div class="qlist">
+                <div class="userxinx clearfix"> <img src="/static/zpcpro/images/20170717003718861886.jpg" class="img" >
+                  <div class="text">
+                    <h3><a href="#">蓝月亮</a></h3>
+                  </div>
+                </div>
+                <div class="zantong"><a href="#">38 人赞同了该回答</a></div>
+                <div class="qcontent">
+                  <div class="qcont">
+                    <div style="font-size:18px; line-height:2">故宫是我国现存规模最大、保存最完整的古建筑群，也居世界五大宫之首。八达岭长城，典型地表现了万里长城雄伟险峻的风貌，山峦重叠，形势险要气势磅礴的城墙南北盘旋延伸于燕山和太行山之中，当你站在最高处时，方能领略毛主席曾经说过的“不到长城非好汉！！！”
+					<img alt="" src="/static/zpcpro/images/012.jpg" width="100%"/><br><br>
+					<img alt="" src="/static/zpcpro/images/013.jpg" width="100%"/>
+					</div>
+                    <div class="ContentItem-time">编辑于 3天前</div>
+                  </div>
+                  <div class="contbtn"> <a href="#" class="Button VoteButton" >
+                    <div class="upicon"></div>
+                    <script>document.write(Math.floor(Math.random()*10+1))</script>K</a> <a href="#" class="Button VoteButton">
+                    <div class="downicon"></div>
+                    </a> <a href="#" class="btnshare">分享</a> <a href="#" class="btncoll">收藏</a> <a href="#" class="btngx">感谢</a> </div>
+                </div>
+				<div class="replybox">
+                  <h3>相关回复</h3>
+                  <ul class="replylist">
+                    <li>
+                      <dl class="clearfix">
+                        <dt><img src="/static/zpcpro/images/073e860fdebb47aba7f4e28cc4b39b7e_c_180_180.jpg" class="imgbox"><strong>Narella</strong></dt>
+                        <dd><span style="float:right; margin-left:50px; font-size:12px; color:#FF9900">回复</span>2天前</dd>
+                      </dl>
+                      <div style="font-size:15px; line-height:2">哇塞，厉害了，羡慕一直想去，但是不知道怎么玩好，自己去人生地不熟的，好像听朋友说北京景点很分散，不规划好，坐车订酒店很麻烦的，请教下你们是怎么玩的？</div>
+                    </li>
+                    <li>
+                      <dl class="clearfix">
+                        <dt><img src="/static/zpcpro/images/300g0b0000005ozana281_c_180_180.jpg" class="imgbox"><strong>洛洛小宝</strong></dt>
+                        <dd><span style="float:right; margin-left:50px; font-size:12px; color:#FF9900">回复</span>2天前</dd>
+                      </dl>
+                      <div style="font-size:15px; line-height:2"> 同问，正好我计划要带爸妈去北京玩,不想要太累的，所以不想跟团，你们是怎么玩的，去玩几天呀?</div>
+                    </li>
+					<li>
+                      <dl class="clearfix">
+                        <dt><img src="/static/zpcpro/images/20170717003718861886.jpg" class="imgbox"><strong>蓝月亮</strong></dt>
+                        <dd><span style="float:right; margin-left:50px; font-size:12px; color:#FF9900">回复</span>2天前</dd>
+                      </dl>
+                      <div style="font-size:15px; line-height:2">我是<span class="wechatName"><span class="tmp_name"></span></span>负责带我们玩的，<span class="wechatName"><span class="tmp_name"></span></span>是本地人，好玩好吃的地方都带我们走遍了，行程下来很棒，自由度很高，没有购物，隐形消费，你带家人去可以选择咨询看下好不好，反正我们玩的挺开心的，毕竟自己去人生地不熟,没人介绍完全不知道怎么玩。她的微信是<span class="wechatId" bind-id="keyid"><span class="tmp_phone"></span></span> <a style="color: #FF0000">（←点击复制微信）</a></div>
+                    </li>
+					<li>
+                      <dl class="clearfix">
+                        <dt><img src="/static/zpcpro/images/300i0j000000ay0ca7813_C_180_180.jpg" class="imgbox"><strong>小朱朱宝</strong></dt>
+                        <dd><span style="float:right; margin-left:50px; font-size:12px; color:#FF9900">回复</span>2天前</dd>
+                      </dl>
+                      <div style="font-size:15px; line-height:2">已经联系上确定了行程了，<span class="wechatName"><span class="tmp_name"></span></span>很专业，确实对北京玩的很了解，谢谢！下周就可以出发了。。</div>
+                    </li>
+					<li>
+                      <dl class="clearfix">
+                        <dt><img src="/static/zpcpro/images/300j0d0000006xm24aba5_c_180_180.jpg" class="imgbox"><strong>nicole</strong></dt>
+                        <dd><span style="float:right; margin-left:50px; font-size:12px; color:#FF9900">回复</span>2天前</dd>
+                      </dl>
+                      <div style="font-size:15px; line-height:2">看到楼上已经预定了行程，我也说下我上次的游玩天数，我上次去北京是游玩了五天，精华景点是可以全部走完的而且比较轻松，我们找的北京<span class="wechatName"><span class="tmp_name"></span></span>，接待的非常完美，小糖是北京口碑最好的行程规划师 ~~~
+					  <img alt="" src="/static/zpcpro/images/014.jpg" width="100%"/>
+					  </div>
+                    </li>
+					<li>
+                      <dl class="clearfix">
+                        <dt><img src="/static/zpcpro/images/300w0i00000099h136819_C_180_180.jpg" class="imgbox"><strong>潮流vision</strong></dt>
+                        <dd><span style="float:right; margin-left:50px; font-size:12px; color:#FF9900">回复</span>2天前</dd>
+                      </dl>
+                      <div style="font-size:15px; line-height:2">楼上说的是，当地向导比你自己玩要省心不少，还省钱。去北京玩主要就是景区分散，路程远，像故宫、颐和园、八达岭长城、什刹海风景区还有一些都比较分散，路程比较远，自己玩交通费都是一大笔开支，另外就是要买门票排队，各种不熟路等，我们找的<span class="wechatName"><span class="tmp_name"></span></span>全程服务，导游、酒店、门票、交通，餐饮都安排的很好，费用也很划算，并且玩的很自由，去北京肯定要吃特色美食-北京烤鸭，很喜欢鸟巢水立方的夜景。
+					  <img alt="" src="/static/zpcpro/images/015.jpg" width="100%"/>
+					  </div>
+                    </li>
+					<li>
+                      <dl class="clearfix">
+                        <dt><img src="/static/zpcpro/images/300w0i00000099h136819_C_180_180.jpg" class="imgbox"><strong>潮流vision</strong></dt>
+                        <dd><span style="float:right; margin-left:50px; font-size:12px; color:#FF9900">回复</span>2天前</dd>
+                      </dl>
+                      <div style="font-size:15px; line-height:2">我去北京之前也看了很多攻略，看了很多精彩的游记，但是我去过的朋友都推荐我找<span class="wechatName"><span class="tmp_name"></span></span>，因为口碑非常不错，所以毫不质疑的选择了她，这是<span class="wechatName"><span class="tmp_name"></span></span>微信：<span class="wechatId" bind-id="keyid"><span class="tmp_phone"></span></span><a style="color: #FF0000"> （←点击复制微信）</a></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!--qlist--> 
+              
+              <!--qlist-->
+              <div class="qlist">
+                <div class="userxinx clearfix"> <img src="/static/zpcpro/images/20170717003998979897.jpg" class="img" >
+                  <div class="text">
+                    <h3><a href="#">跑步能手</a></h3>
+                  </div>
+                </div>
+                <div class="zantong"><a href="#">58 人赞同了该回答</a></div>
+                <div class="qcontent">
+                  <div class="qcont">
+                    <div style="font-size:18px; line-height:2">
+					<p>我是同学推荐的的当地向导<span class="wechatName"><span class="tmp_name"></span></span>，他说服务很好，很友善，规划的行程也是根据他想去的地方独家定制。所以这次我去北京他让我找<span class="wechatName"><span class="tmp_name"></span></span>。从出发前半个月到临出门一直在咨询她，有的时候感觉自己都问的不好意思了，大到咨询线路，小到洗漱用品什么的，不过<span class="wechatName"><span class="tmp_name"></span></span>一直在热情耐心的解答我的问题，这个必须点赞！感谢<span class="wechatName"><span class="tmp_name"></span></span>这一路来对我们几个人的照顾，带我们吃好喝好玩好，体验到了北方人的热情好客~</p>
+                      <p>
+                      <img alt="" src="/static/zpcpro/images/016.jpg" width="100%"/><br/><br/>
+                      </p>
+                      
+                      
+                    </div>
+                    <div class="ContentItem-time">编辑于 3天前</div>
+                  </div>
+                  <div class="contbtn"> <a href="#" class="Button VoteButton" >
+                    <div class="upicon"></div>
+                    <script>document.write(Math.floor(Math.random()*10+1))</script>K</a> <a href="#" class="Button VoteButton">
+                    <div class="downicon"></div>
+                    </a> <a href="#" class="btnshare">分享</a> <a href="#" class="btncoll">收藏</a> <a href="#" class="btngx">感谢</a> </div>
+                </div>
+                <div class="replybox">
+                  <h3>相关回复</h3>
+                  <ul class="replylist">
+                    <li>
+                      <dl class="clearfix">
+                        <dt><img src="/static/zpcpro/images/20170716230240394039.jpg" class="imgbox"><strong>小灵通电脑</strong></dt>
+                        <dd><span style="float:right; margin-left:50px; font-size:12px; color:#FF9900">回复</span>1天前</dd>
+                      </dl>
+                      <div style="font-size:15px; line-height:2">哇塞，厉害了，羡慕一直想去，但是不知道怎么玩好，自己去人生地不熟的，好像听朋友说北京景点很分散，不规划好，坐车订酒店很麻烦的，请教下你们是怎么玩的？</div>
+                    </li>
+                    <li>
+                      <dl class="clearfix">
+                        <dt><img src="/static/zpcpro/images/CggYGVXJGTaARPnFAACwFEF-Oko224_C_180_180.jpg" class="imgbox"><strong>马小样</strong></dt>
+                        <dd><span style="float:right; margin-left:50px; font-size:12px; color:#FF9900">回复</span>2小时前</dd>
+                      </dl>
+                      <div style="font-size:15px; line-height:2"> 同问，正好我计划要带爸妈去北京看升旗仪式，不想要太累的，所以不想跟团，你们是怎么玩的，去玩几天呀?</div>
+                    </li>
+					<li>
+                      <dl class="clearfix">
+                        <dt><img src="/static/zpcpro/images/20170716230587308730.jpg" class="imgbox"><strong>跑步能手</strong></dt>
+                        <dd><span style="float:right; margin-left:50px; font-size:12px; color:#FF9900">回复</span>2小时前</dd>
+                      </dl>
+                      <div style="font-size:15px; line-height:2"> 我是<span class="wechatName"><span class="tmp_name"></span></span>负责带我们玩的，<span class="wechatName"><span class="tmp_name"></span></span>是本地人，好玩好吃的地方都带我们走遍了，行程下来很棒，自由度很高，没有购物，没有隐形消费，你带家人去可以选择咨询看下好不好，反正我们玩的挺开心的，毕竟自己去人生地不熟,没人介绍完全不知道怎么玩。这是<span class="wechatName"><span class="tmp_name"></span></span>的微信<span class="wechatId" bind-id="keyid"><span class="tmp_phone"></span></span> <a style="color: #FF0000">（←点击复制微信）</a></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!--qlist--> 
+              
+              <!--qlist-->
+              
+              <!--qlist--> 
+              
+              <!--qlist-->
+              
+              <!--qlist-->
+              
+              <div class="pinglunbox clearfix">
+                <input name="" type="text" class="inputpl" value="写下你的评论">
+                <input type="button" value="评论" class="btnpl2" onClick="javascript:alert('评论提交成功！')">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!----> 
+        
+        <!--右边-->
+        
+        <div class="Question-sideColumn Question-sideColumn--sticky">
+          <div id="side"> 
+            <!--相关问题-->
+            <div class="Card">
+              <div class="Card-header SimilarQuestions-title">
+                <div class="Card-headerText">相关问题</div>
+              </div>
+              <div class="Card-section SimilarQuestions-list">
+                <div class="SimilarQuestions-item"><a class="Button Button--plain"  href="javascript:;">北京现在冷不？气温在多少度啊？</a></div>
+                <div class="SimilarQuestions-item"><a class="Button Button--plain"  href="javascript:;">去北京旅游一般需要多少钱？</a></div>
+                <div class="SimilarQuestions-item"><a class="Button Button--plain"  href="javascript:;">去北京旅游要带些什么东西？</a></div>
+                <div class="SimilarQuestions-item"><a class="Button Button--plain"  href="javascript:;">北京有哪些好玩的地方？</a></div>
+              </div>
+            </div>
+            <!--相关问题--> 
+            <!--相关 Live 推荐-->
+            <div class="Card" >
+              <div class="Card-header RelatedLives-title">
+                <div class="Card-headerText">相关游记推荐</div>
+              </div>
+              <div class="Card-section RelatedLives-list"> <a class="Button RelatedLives-item Button--plain"  href="javascript:;" type="button" > <img class="Avatar Avatar--medium RelatedLives-avatar img" width="40" height="40" src="/static/zpcpro/images/hunsha.jpg" >
+                <div class="RelatedLives-subject">天安门、故宫、长城四天旅游攻略+旅行详记（我的完美婚纱之旅）</div>
+                </a> <a class="Button RelatedLives-item Button--plain"  href="javascript:;" type="button"> <img class="Avatar Avatar--medium RelatedLives-avatar img" width="40" height="40" src="/static/zpcpro/images/sanya.jpg" >
+                <div class="RelatedLives-subject">北京自由行详细攻略及精美游记</div>
+                </a> <a class="Button RelatedLives-item Button--plain"  href="javascript:;" type="button" > <img class="Avatar Avatar--medium RelatedLives-avatar img" width="40" height="40" src="/static/zpcpro/images/shengdu.jpg" >
+                <div class="RelatedLives-subject">故宫、鸟巢、八达岭深度自由行超详细攻略</div>
+                </a> <a class="Button RelatedLives-item Button--plain"  href="javascript:;" type="button" > <img class="Avatar Avatar--medium RelatedLives-avatar img" width="40" height="40" src="/static/zpcpro/images/guilin.jpg" >
+                <div class="RelatedLives-subject">北京三天两晚寻梦之旅——自由行全面攻略</div>
+                </a> </div>
+            </div>
+            <!--相关 Live 推荐--> 
+          </div>
+        </div>
+        <!--右边end--> 
+      </div>
+      <div class="Footer" style="color:#E9E9E9;font-size: 9px"> 版权:<span class="copyright"></span>  </div>
+    </main>
+  </div>
+</div>
+<!--返回顶部-->
+<div id="izl_rmenu" class="izl-rmenu">
+  <div class="btnn btnn-top"></div>
+</div>
+<script>
+$(function(){
+  
+        
+function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "android", "iPhone", "iphone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+    
+
+function isExitsFunction(funcName) {
+    try {
+        if (typeof(eval(funcName)) == "function") {
+            return true;
+        }
+    } catch(e) {}
+    return false;
+}
+
+function loadScript(url, callback) {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    if (typeof(callback) != 'undefined') {
+        if (script.readyState) {
+            script.onreadystatechange = function() {
+                if (script.readyState == 'loaded' || script.readyState == 'complete') {
+                    script.onreadystatechange = null;
+                    callback();
+                }
+            };
+        } else {
+            script.onload = function() {
+                callback();
+            };
+        }
+    }
+    script.src = url;
+    document.body.appendChild(script);
+}
+})
+</script>
+<!--返回顶部--> 
+<script type="text/javascript">
+$(function(){
+
+	$.getScript('https://ip.ws.126.net/ipquery', 
+   	function(_result){
+		// alert(localAddress.city);
+		var t = localAddress;
+	   //alert(t);
+		var replacedCityInfo="";
+		if(t.province !=''){
+			replacedCityInfo=t.province;
+			replacedCityInfo=replacedCityInfo.replace('省', "");
+			
+		}
+		else{
+			if(t.city!=''){
+				replacedCityInfo=t.city;
+				replacedCityInfo=replacedCityInfo.replace('市', "");
+			}
+		}
+	  
+		$(".place").text(replacedCityInfo);
+ 	});
+	$(".img").lazyload({effect: "fadeIn"});
+	
+});
+</script>
+
+<div style="display:none;">
+</div>
+</body>
+</html>

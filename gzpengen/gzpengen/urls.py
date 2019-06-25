@@ -1,3 +1,4 @@
+# coding=utf-8
 """gzpengen URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -15,9 +16,10 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from django.conf.urls.static import static
 from indexs import views
+from strategy import views as strategy_views
 from django.conf import settings
+from django.views import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -34,4 +36,17 @@ urlpatterns = [
     url(r'^popular/', views.popular),
     url(r'^scenic/', views.scenic),
     url(r'^strategy/', views.strategy),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    # 攻略页面url
+    url(r'^lpcpro.html/', strategy_views.lpcpro),
+    url(r'^lpcpro_data/', strategy_views.lpcpro_data),
+    url(r'^lmobilepro.html/', strategy_views.lmobilepro),
+    url(r'^lmobilepro_data/', strategy_views.lmobilepro_data),
+    url(r'^zpcpro.html/', strategy_views.zpcpro),
+    url(r'^zpcpro_data/', strategy_views.zpcpro_data),
+    url(r'^zmobilestrategy.html/', strategy_views.zmobilestrategy),
+    url(r'^zmobilestrategy_data/', strategy_views.zmobilestrategy_data),
+    url(r'^ymobilepro2.html/', strategy_views.ymobilepro2),
+    url(r'^ymobilepro2_data/', strategy_views.ymobilepro2_data),
+    # 加载上传文件的页面
+    url(r'^Media/(?P<path>.*)$', static.serve, {'document_root':settings.MEDIA_ROOT})
+]
